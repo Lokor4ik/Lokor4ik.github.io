@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="eu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GoWebNow | Курсы создания сайтов - Обучение программрованию с нуля</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/animate.css">
+</head>
+
+<body>
+    <!--Костыли:
+                1) Использование явного значение позиции блока с классом .skills в функции .scroll(function() в файле main.js
+                2) Неисправленна остановка функции Volovka() при покидании скролом блока с классом .skills
+                3) Слайдер в блоке .slider при появлении его в экране прокручивается не с начала
+                4) Анимация в блоке .menu не реагирует на курсор, когда наводишь на область минимальной высоты желтого блока, а также и на область максимальной высоты
+                5) Анимация выдвгающейся тени слетает если изменить размер окна <= 857 и обратно
+                7) Не адаптировано модалбное окно
+                8) Верхняя меюшка не адаптирована полностью
+                9)Ещё что-то... -->
+    <header class="header">
+        <div class="container">
+            <div class="header_content">
+                <div class="logo">
+                    <a href="#">
+                        <img src="img/logo.png" alt="">
+                    </a>
+                </div>
+
+                <div class="menu">
+                    <div class="wrappen_menu_inner">
+                        <div class="wrapper-menu">
+                            <div class="line-menu half start"></div>
+                            <div class="line-menu"></div>
+                            <div class="line-menu half end"></div>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                О ПРОЕКТЕ
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                УСЛОВИЯ ОБУЧЕНИЯ
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                ПРЕПОДОВАТЕЛИ
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                        </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                ВОПРОСЫ И ОТВЕТЫ
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                        </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                КОНТАКТЫ
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="wrap">
+        <section class="interactive">
+            <div class="container">
+                <div class="interactiver_box">
+                    <div class="interactive_title">
+                        <div class="interactive_title_top wow fadeInUp">
+                            ИНТЕРАКТИВНЫЙ ОНЛАЙН КУРС
+                        </div>
+
+                        <div class="interactive_title_under">
+                            ВЕБ-ПРОГРАММИСТ - БЫСТРЫЙ СТАРТ!
+                        </div>
+                    </div>
+
+                    <div class="interactive_main">
+                        <div class="interactive_main_top">
+                            Освойте <b>65 базовых навыков</b> создания сайтов в <b>одном курсе</b>
+                        </div>
+
+                        <div class="interactive_main_under">
+                            <div class="main_under_one">
+                                <div id="tps">
+                                    <p>+ верстка&nbsp;&nbsp; + программирование&nbsp;&nbsp; + базы-данных</p>
+                                </div>
+                                <span id="typed"></span>
+                                <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js"></script>
+                                <script>
+                                    var typed = new Typed('#typed', {
+                                        stringsElement: '#tps',
+                                        typeSpeed: 50,
+                                        startDelay: 1000,
+                                        loop: false,
+                                    });
+                                </script>
+                            </div>
+
+                            <div class="main_under_two">
+                                <div id="tps_2">
+                                    <p>+ фреймворки &nbsp;&nbsp;+ администрирование&nbsp;&nbsp; + seo . . .</p>
+                                </div>
+                                <span id="typed2"></span>
+                                <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js"></script>
+                                <script>
+                                    var typed = new Typed('#typed2', {
+                                        stringsElement: '#tps_2',
+                                        typeSpeed: 50,
+                                        startDelay: 5200,
+                                        loop: false
+                                    });
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="interactive_under">
+                        <div class="interactive_under_content">
+                            HTML, CSS, Bootstrap, PHP, MySQL, JavaScript, jQuery, Linux, Git, CodeIgniter...
+                        </div>
+                    </div>
+
+                    <div class="interactive_video">
+                        <div class="video">
+                            <div class="video_up">
+                                <img width="400" src="img/human.jpg" alt="human">
+                            </div>
+                            <div class="video_play_btn">
+                                <img src="img/icon-play.png" alt="play">
+                            </div>
+                        </div>
+                        <div class="interactive_btn">
+                            <a href="#to_form">
+                                <div class="interactive_inner_btn">
+                                    Записаться на обучение
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="third_info">
+            <div class="container">
+                <div class="third_info_items">
+                    <div class="third_info_item">
+                        <div class="third_info_item_inner">
+                            <div class="third_info_item_title">
+                                Все в одном курсе
+                            </div>
+
+                            <div class="third_info_item_under">
+                                Не нужно проходить несколько курсов — в этом курсе вы получите все что нужно начинающему веб-программисту для успешного старта
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="third_info_item">
+                        <div class="third_info_item_inner">
+                            <div class="third_info_item_title">
+                                80% практики
+                            </div>
+
+                            <div class="third_info_item_under two">
+                                Вы закрепляете полученные знания и получаете результат сразу - благодаря интерактивным тестам и заданиям
+                            </div>
+                        </div>
+                    </div>
+                    <div class="third_info_item">
+                        <div class="third_info_item_inner">
+                            <div class="third_info_item_title">
+                                Цены не кусаются
+                            </div>
+
+                            <div class="third_info_item_under three">
+                                Стоимость обучения доступна каждому - всего от 90 грн. в месяц по Акции!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about_learn">
+            <div class="container">
+                <div class="learn_title wow fadeInUp">
+                    Узнайте - чему вы научитесь?
+                </div>
+
+                <div class="learn_check_img_box">
+                    <div class="learn_check">
+                        <ul>
+                            <li>Вы научитесь верстать и программировать, и создадите свой профессиональный красивый сайт о КИНО с регистрацией, базой данных, интересными анонсами, комментариями и адаптивной версткой.</li>
+                            <li>На практике вы пройдете все этапы создания сайта и освоите базовые технологии и навыки: верстка, программирование, базы данных, популярные фреймворки, установка и управление хостингом для вашего сайта, базовые принципы seo-оптимизации
+                                и многое другое.</li>
+                            <li>Используя такое системное обучение вы научитесь писать код профессионально, что позволит работать как самостоятельно, так и легко встраиваться в рабочий процесс любой команды разработчиков.</li>
+                            <li>Вы создадите прочный фундамент и, обладая широким набором навыков, сможете делать смелые шаги в другие направления. Реализовать десятки-сотни всевозможных проектов, как для себя, так и для других людей за хорошие деньги!</li>
+                        </ul>
+                    </div>
+                    <div class="learn_img">
+                        <img src="img/learn.png" alt="learn">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="slider">
+            <div class="container">
+                <div class="slider_title">
+                    В курсе вы освоите технологии:
+                </div>
+
+                <div class="slider__inner ">
+                    <div class="slider_item">
+                        <div class="slider_item_content">
+                            <div class="slider_item_inner">
+                                <img src="img/HTML.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slider_item">
+                        <div class="slider_item_content">
+                            <div class="slider_item_inner">
+                                <img src="img/CSS.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slider_item">
+                        <div class="slider_item_content">
+                            <div class="slider_item_inner">
+                                <img src="img/js.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slider_item">
+                        <div class="slider_item_content">
+                            <div class="slider_item_inner">
+                                <img src="img/jquery.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slider_item">
+                        <div class="slider_item_content">
+                            <div class="slider_item_inner">
+                                <img src="img/mysql.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slider_item">
+                        <div class="slider_item_content">
+                            <div class="slider_item_inner">
+                                <img src="img/php.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slider_item">
+                        <div class="slider_item_content">
+                            <div class="slider_item_inner">
+                                <img src="img/git-big.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills">
+            <div class="container">
+                <div class="skills_title_box">
+                    <div class="skills_title">
+                        65 навыков создания сайтов, которые вы получите
+                    </div>
+                </div>
+                <div class="skills_boxes">
+                    <div class="skills_box">
+                        <div class="box_content">
+                            <div class="box_title box_title_html sliders">
+                                HTML / CSS
+                            </div>
+
+                            <div class="box_under box_one_under">
+                                <ol id="ol_html">
+                                    <li><span>1</span>Знание HTML и CSS</li>
+                                    <li><span>2</span>Полноценная верстка страниц сайтов</li>
+                                    <li><span>3</span>Работа в редакторе кода SublimeText</li>
+                                    <li><span>4</span>Практическое применение основных тегов HTML</li>
+                                    <li><span>5</span>CSS-верстка текста: цвет и размер шрифта</li>
+                                    <li><span>6</span>Позиционирование блоков на сайте</li>
+                                    <li><span>7</span>Работа с изображениями</li>
+                                    <li><span>8</span>Правильная HTML-разметка для SEO</li>
+                                    <li><span>9</span>Адаптивная верстка под мобильные устройства</li>
+                                    <li><span>10</span>Специальные классы для адаптивности</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="box_content">
+                            <div class="box_title box_title_linux sliders_2">
+                                LINUX / GIT
+                            </div>
+
+                            <div class="box_under">
+                                <ol id="ol_linux">
+                                    <li><span>35</span>Работа с терминалом Linux</li>
+                                    <li><span>36</span>Команды перемещения по каталогам, копирования и просмотра файлов</li>
+                                    <li><span>37</span>Назначение прав для сайта на серверах</li>
+                                    <li><span>38</span>Подключение по SSH и FTP к серверу</li>
+                                    <li><span>39</span>Подключение к базе данных сайта, резервная копия</li>
+                                    <li><span>40</span>Система контроля кода GIT для командной работы над проектами</li>
+                                    <li><span>41</span>Облачный репозиторий GIT - Bitbucket</li>
+                                    <li><span>42</span>Синхронизация кода вашего сайта с GIT-репозиторием</li>
+                                    <li><span>43</span>Выгрузка кода из GIT-репозитория на Linux-хостинг</li>
+                                    <li><span>44</span>Консольный редактор NANO</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills_box">
+                        <div class="box_content">
+                            <div class="box_title box_title_bootstrap sliders">
+                                BOOTSTRAP
+                            </div>
+
+                            <div class="box_under box_two_under">
+                                <ol id="ol_bootstrap">
+                                    <li><span>11</span>Быстрая адаптивная верстка</li>
+                                    <li><span>12</span>Основные классы и компоненты Bootstrap</li>
+                                    <li><span>13</span>Красивые формы для ввода логина и пароля</li>
+                                    <li><span>14</span>Галерея изображений - на сайте за 2 минуты</li>
+                                    <li><span>15</span>“Умное” адаптивное меню для сайта</li>
+                                    <li><span>16</span>Одностраничные сайты за 1-3 дня</li>
+                                    <li><span>17</span>Красивые иконки за 1 минуту</li>
+                                    <li><span>18</span>Адаптивность изображений</li>
+                                    <li><span>19</span>Полезные советы и материалы</li>
+                                    <li><span>20</span>Навыки работы с Bootstrap - частое требование работодателей</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="box_content">
+                            <div class="box_title box_title_codeigniter sliders_2">
+                                CODEIGNITER
+                            </div>
+
+                            <div class="box_under">
+                                <ol id="ol_codeigniter">
+                                    <li><span>45</span>Знакомство с фреймворком Codeigniter и настройка</li>
+                                    <li><span>46</span>MVC-паттерн, логика MVC-концепции</li>
+                                    <li><span>47</span>Роутинг страниц (уникальные адреса)</li>
+                                    <li><span>48</span>Основы SEO - создание Friendly URL</li>
+                                    <li><span>49</span>CRUD и его применение</li>
+                                    <li><span>50</span>Интеграция HTML-верстки в Codeigniter</li>
+                                    <li><span>51</span>Пагинация для страниц с большим количеством контента</li>
+                                    <li><span>52</span>Авторизация/регистрация для сайта с подтверждением почты</li>
+                                    <li><span>53</span>Разделение доступов для админа сайта и пользователя</li>
+                                    <li><span>54</span>Модуль комментариев для сайта</li>
+                                    <li><span>55</span>Создание поиска на сайте</li>
+                                    <li><span>56</span>Полезные практические советы и рекомендациий</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills_box">
+                        <div class="box_content">
+                            <div class="box_title box_title_php sliders">
+                                PHP / MYSQL
+                            </div>
+
+                            <div class="box_under">
+                                <ol id="ol_php">
+                                    <li><span>21</span>Что такое язык PHP и применение</li>
+                                    <li><span>22</span>Конструкции PHP - переменные, операторы, циклы, массивы, классы</li>
+                                    <li><span>23</span>Написание функций под свои задачи</li>
+                                    <li><span>24</span>Объектно-ориентированное программирование (ООП)</li>
+                                    <li><span>25</span>Полиморфизм, инкапсуляция, наследование, абстрактный класс, интерфейс в ООП</li>
+                                    <li><span>26</span>Веб-сервер APACHE, установка и конфигурирование</li>
+                                    <li><span>27</span>Система администрирования сайта PhpMyAdmin</li>
+                                    <li><span>28</span>Проектирование структуры базы данных</li>
+                                    <li><span>29</span>Работа с XML и JSON форматами</li>
+                                    <li><span>30</span>Передача данных HTML-формы - методы GET и POST</li>
+                                    <li><span>31</span>Безопасность - как защитить сайт от взлома</li>
+                                    <li><span>32</span>Базы данных MySQL, основные операции</li>
+                                    <li><span>33</span>SQL-запросы, синтаксис, работа с ActiveRecords</li>
+                                    <li><span>34</span>Создание парсеров для сбора информации для сайта</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="box_content">
+                            <div class="box_title box_title_js sliders_2">
+                                JAVASCRIPT JQUERY
+                            </div>
+
+                            <div class="box_under">
+                                <ol id="ol_js">
+                                    <li><span>57</span>Основы языка Javascript и библиотеки jQuery</li>
+                                    <li><span>58</span>Интеграция кода JS для живости сайта</li>
+                                    <li><span>59</span>Работа с плагинами jQuery</li>
+                                    <li><span>60</span>DOM-элементы сайта</li>
+                                    <li><span>62</span>Стили и события для элементов сайта: например, нажатие на кнопку</li>
+                                    <li><span>62</span>Работа с массивами и циклами</li>
+                                    <li><span>64</span>Создание функций на JavaScript</li>
+                                    <li><span>64</span>Что такое JSON</li>
+                                    <li><span>65</span>Инструменты отладки JS и jQuery с помощью браузера Google Chrome</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="form">
+            <a id="to_form"></a>
+            <div class="container">
+                <div class="form_box">
+                    <div class="form_up">
+                        <div class="up_title">
+                            Подача заявки
+                        </div>
+
+                        <div class="up_under">
+                            Онлайн заявка позволяет предварительно забронировать место в группе. Если Вас заинтересовал этот курс, пожалуйста, оставьте заявку, даже если график вам не очень подходит. Пересмотр расписания происходит постоянно, и при достаточном количестве желающих,
+                            мы можем открыть группу, максимально комфортную для Вас.
+                        </div>
+                    </div>
+                    <form action="#" method="GET" id="form">
+                        <div class="form_middle">
+                            <div class="form_initials">
+                                <div class="init_left">
+                                    <input id="user_name" type="text" placeholder="Ваше Имя" name="user_name">
+                                </div>
+
+                                <div class="init_right">
+                                    <input id="user_last_name" type="text" placeholder="Ваша Фамилия" name="user_last_name">
+                                </div>
+                            </div>
+
+                            <div class="num_and_em">
+                                <div class="num">
+                                    <input id="user_num" class="phone" type="tel" placeholder="Ваш номер телефона" name="user_num">
+                                </div>
+
+                                <div class="em">
+                                    <input id="user_email" type="email" placeholder="Ваш E-mail" name="user_email">
+                                </div>
+                            </div>
+
+                            <div class="repayment_and_education">
+                                <div class="repayment">
+                                    <div class="rep_span">
+                                        <span>Форма оплаты:</span>
+                                    </div>
+
+                                    <div class="rep_radio">
+                                        <div class="rep_radio_top">
+                                            <input id="user_pay_cash" type="radio" name="money">
+                                            <label for="user_pay_cash">Наличный расчёт</label>
+                                        </div>
+
+                                        <div class="rep_redio_bottom">
+                                            <input id="user_pay_non_cash" type="radio" name="money">
+                                            <label for="user_pay_non_cash">Безналичный расчёт</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="education">
+                                    <div class="edu_span">
+                                        <span>Форма обучения:</span>
+                                    </div>
+
+                                    <div class="edu_select">
+                                        <select id="f_ed">
+                                            <option value="choice">Выбрать...</option>
+                                            <option value="5 дней в неделю">5 дней в неделю</option>
+                                            <option value="3 дня в неделю">3 дня в неделю</option>
+                                            <option value="8 дней в месяц">8 дней в месяц</option>
+                                            <option value="5 дней в месяц">5 дней в месяц</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="com_question">
+                                <textarea id="c_qu" name="c_qu" placeholder="Ваш комментарий" maxlength="1500"></textarea>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="btn">
+                        <input class="intro_btn" value="Отправить заявку" name="intro_btn" type="button" onclick="valid(document.getElementById('form'))">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer_boxes">
+                <div class="f_box">
+                    <div class="f_box_title">
+                        <!--logtype-->
+
+                    </div>
+                    <div class="f_box_under">
+                        Онлайн курсы программирования и создания сайтов с нуля. Обучение основам разработки и веб-программирования для начинающих. Включайся!
+                    </div>
+                </div>
+
+                <div class="f_box">
+                    <div class="f_box_title title_one">
+                        ОБЩИЕ ССЫЛКИ
+                    </div>
+                    <div class="f_box_under">
+                        <ul>
+                            <li><a href="#">О проекте</a></li>
+                            <li><a href="#">Связаться с нами</a></li>
+                            <li><a href="#">Политика конфиденциальности</a></li>
+                            <li><a href="#">Условия обучения</a></li>
+                            <li><a href="#">Цены и оплата</a></li>
+                            <li><a href="#">Блог</a></li>
+                            <li><a href="#">Вопросы и ответы</a></li>
+                            <li><a href="#">Партнерская программа</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="f_box">
+                    <div class="f_box_title three_title">
+                        Есть вопросы? Найдем ответы!
+                    </div>
+                    <div class="f_box_three_middle">
+
+                    </div>
+                    <div class="f_box_under three_under">
+                        <div class="three_under_title">
+                            Присоединяйтесь к нам!
+                        </div>
+                        <div id="three_under_li">
+                            <ul>
+                                <li>
+                                    <a class="vk_net"></a>
+                                </li>
+                                <li>
+                                    <a class="fb_net"></a>
+                                </li>
+                                <li>
+                                    <a class="yt_net"></a>
+                                </li>
+                                <li>
+                                    <a class="i_net"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="hidden-content">
+        <form>
+            <div id="hidden_title">
+                Ваши данные:
+            </div>
+            <div id="hidden_name">
+                Ваше Имя:
+            </div>
+            <div id="hidden_last_name">
+                Ваша Фамилия:
+            </div>
+            <div id="hidden_num">
+                Ваш номер телефона:
+            </div>
+            <div id="hidden_email">
+                Ваш E-mail:
+            </div>
+            <div id="hidden_payment">
+                Форму оплаты:
+            </div>
+            <div id="hidden_education">
+                Форму обучения:
+            </div>
+            <div id="hidden_comment">
+                Ваш комментарий:
+            </div>
+        </form>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/JavaValid.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script>
+        jQuery(function($) {
+            $(".phone").mask("+3 (999) 999-9999")
+        });
+    </script>
+    <script>
+        new WOW().init();
+    </script>
+</body>
+
+</html>
