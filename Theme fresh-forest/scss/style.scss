@@ -620,33 +620,33 @@ li {
                     margin: 0px 13px;
                     transition: all ease-in-out .3s;
                     &:nth-of-type(1) {
-                        background-image: url(/img/footer_google.png);
+                        background-image: url(../img/footer_google.png);
                         width: 20px;
                         height: 19px;
                         background-repeat: no-repeat;
                         background-size: cover;
                         &:hover {
-                            background-image: url(/img/footer_google_active.png);
+                            background-image: url(../img/footer_google_active.png);
                         }
                     }
                     &:nth-of-type(2) {
-                        background-image: url(/img/footer_facebook.png);
+                        background-image: url(../img/footer_facebook.png);
                         width: 10px;
                         height: 17px;
                         background-repeat: no-repeat;
                         background-size: cover;
                         &:hover {
-                            background-image: url(/img/footer_facebook_active.png);
+                            background-image: url(../img/footer_facebook_active.png);
                         }
                     }
                     &:nth-of-type(3) {
-                        background-image: url(/img/footer_twitter.png);
+                        background-image: url(../img/footer_twitter.png);
                         width: 16px;
                         height: 14px;
                         background-repeat: no-repeat;
                         background-size: cover;
                         &:hover {
-                            background-image: url(/img/footer_twitter_active.png);
+                            background-image: url(../img/footer_twitter_active.png);
                         }
                     }
                 }
