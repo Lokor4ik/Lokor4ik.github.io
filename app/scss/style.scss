@@ -185,7 +185,9 @@ li {
     }
 }
 
-.banner {}
+.banner {
+    margin-bottom: 160px;
+}
 
 .banner__inner {
     background-color: #F8F7F5;
@@ -242,6 +244,109 @@ li {
         cursor: pointer;
         padding: 10px;
         max-width: 233px;
+    }
+}
+
+.slider {
+    text-align: center;
+}
+
+.slider__title {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 46px;
+    margin-bottom: 36px;
+}
+
+.slider__text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 150%;
+    margin-bottom: 46px;
+}
+
+.slider__items {
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider__item {}
+
+.img__inner {
+    background-color: #F8F7F5;
+    min-width: 300px;
+    min-height: 360px;
+    margin: 0px 15px;
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 360px;
+    }
+}
+
+.slider__item-text {
+    margin-top: 17px;
+}
+
+.prev,
+.next {
+    position: absolute;
+    z-index: 3;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px 2px rgba(154, 154, 154, 0.3);
+    cursor: pointer;
+    outline: none;
+    transition: all ease-out .3s;
+    top: 50%;
+    transform: translateY(-80%);
+}
+
+.next {
+    right: -10px;
+    &::before {
+        @extend %before-after;
+        width: 18px;
+        height: 1px;
+        bottom: 65%;
+        left: 32%;
+        background-color: rgb(136, 135, 135);
+        transform: rotate(40deg);
+    }
+    &::after {
+        @extend %before-after;
+        width: 18px;
+        height: 1px;
+        bottom: 35%;
+        left: 32%;
+        background-color: rgb(136, 135, 135);
+        transform: rotate(140deg);
+    }
+}
+
+.prev {
+    left: -10px;
+    &::before {
+        @extend %before-after;
+        width: 18px;
+        height: 1px;
+        bottom: 65%;
+        left: 25%;
+        background-color: rgb(136, 135, 135);
+        transform: rotate(140deg);
+    }
+    &::after {
+        @extend %before-after;
+        width: 18px;
+        height: 1px;
+        bottom: 35%;
+        left: 25%;
+        background-color: rgb(136, 135, 135);
+        transform: rotate(40deg);
     }
 }
 
