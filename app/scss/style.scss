@@ -1,0 +1,248 @@
+@import "vars";
+@import "libs";
+@import "fonts";
+* {
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    &::before {
+        display: block;
+        @extend %before-after;
+        top: 0;
+        height: 3px;
+        width: 100%;
+        max-width: 1140px;
+        background: #8A87DA;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    color: black;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    display: inline;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.header {
+    padding-top: 3px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.header__top-items {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+}
+
+.header__item.header-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header__item.header-right {
+    text-align: right;
+}
+
+.header-left__search {
+    background: #F2F2F2;
+}
+
+.header-left__search>input,
+.header-left__search>button {
+    font-size: 14px;
+    min-height: 30px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.header-left__search>input {
+    padding: 0px 0px 0px 6px;
+}
+
+.header-left__search>button {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    &::before {
+        content: "\e986";
+        font-family: 'icomoon';
+        opacity: .5;
+    }
+}
+
+.header-left__location {
+    margin-top: 35px;
+    a {
+        position: relative;
+        padding-left: 20px;
+        &::before {
+            @extend %before-after;
+            content: "\e947";
+            font-family: 'icomoon';
+            left: 0;
+            opacity: .5;
+        }
+    }
+}
+
+.header-right__tel {
+    a {
+        font-size: 18px;
+    }
+}
+
+.header-right__entry {
+    a {
+        font-size: 12px;
+        color: rgb(110, 110, 110);
+    }
+}
+
+.header-right__info {
+    a {
+        position: relative;
+        font-size: 14px;
+        transition: all ease-in-out .3s;
+        &:nth-child(1) {
+            margin-right: 20px;
+        }
+        &:hover::after {
+            @extend %before-after;
+            background: #8A87DA;
+            height: 3px;
+            width: 100%;
+            left: 0;
+            bottom: -2px;
+        }
+        span {
+            position: absolute;
+            top: -2px;
+            right: -12px;
+            opacity: .3;
+        }
+    }
+}
+
+.header-right__entry,
+.header-right__info {
+    a {
+        margin-top: 20px;
+    }
+}
+
+.menu {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 700px;
+    ul {
+        li {
+            margin-right: 9px;
+            a {
+                position: relative;
+                font-size: 14px;
+                line-height: 15px;
+                letter-spacing: .3px;
+                &:hover {
+                    &::after {
+                        @extend %before-after;
+                        background: #8A87DA;
+                        height: 3px;
+                        width: 100%;
+                        left: 0;
+                        bottom: -2px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.banner {}
+
+.banner__inner {
+    background-color: #F8F7F5;
+    position: relative;
+    &::before {
+        @extend %before-after;
+        background-image: url(../img/banner__ring.svg);
+        background-repeat: no-repeat;
+        width: 642px;
+        height: 642px;
+        left: 311px;
+        top: 13px;
+    }
+    &::after {
+        @extend %before-after;
+        background-image: url(../img/box__surprising.png);
+        background-repeat: no-repeat;
+        width: 431px;
+        height: 395px;
+        left: 832px;
+        top: 60px;
+    }
+}
+
+.banner__items {
+    display: inline-block;
+    max-width: 404px;
+    margin: 65px 0px 54px 86px;
+    text-align: center;
+}
+
+.banner__title {
+    margin-bottom: 82px;
+    font-size: 36px;
+    line-height: 46px;
+}
+
+.banner__text {
+    font-size: 18px;
+    line-height: 150%;
+    text-align: center;
+    margin-bottom: 130px;
+}
+
+.banner__btn {
+    background: #8A87DA;
+    border-radius: 3px;
+    max-width: 233px;
+    margin-left: 74px;
+    a {
+        font-size: 16px;
+        line-height: 19px;
+        color: #FFFFFF;
+        cursor: pointer;
+        padding: 10px;
+        max-width: 233px;
+    }
+}
+
+@import "media";
