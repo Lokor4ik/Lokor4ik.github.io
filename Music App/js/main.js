@@ -14,7 +14,7 @@ jQuery(document).ready(function($) {
 
         if (id == "first__video") {
             document.querySelector('.video__content-title span:first-child').innerHTML = "Movie #1";
-            document.getElementById("img_for_js").src = "../img/video_blue.png";
+            document.getElementById("img_for_js").src = "img/video_blue.png";
             document.getElementById("fake_link").href = "https://www.youtube.com/watch?v=U0fSWxRCOXQ";
 
             document.getElementById("first__video").style.backgroundColor = 'rgba(255, 255, 255, 0.349)';
@@ -25,7 +25,7 @@ jQuery(document).ready(function($) {
         } else
         if (id == "second__video") {
             document.querySelector('.video__content-title span:first-child').innerHTML = "Movie #2";
-            document.getElementById("img_for_js").src = "../img/video_green.png";
+            document.getElementById("img_for_js").src = "img/video_green.png";
             document.getElementById("fake_link").href = "https://www.youtube.com/watch?v=DwUPmggkK50";
 
             document.getElementById("second__video").style.backgroundColor = 'rgba(255, 255, 255, 0.349)';
@@ -36,7 +36,7 @@ jQuery(document).ready(function($) {
         } else
         if (id == "third__video") {
             document.querySelector('.video__content-title span:first-child').innerHTML = "Movie #3";
-            document.getElementById("img_for_js").src = "../img/video_red.png";
+            document.getElementById("img_for_js").src = "img/video_red.png";
             document.getElementById("fake_link").href = "https://www.youtube.com/watch?v=EL_Zu5V8TGg";
 
             document.getElementById("third__video").style.backgroundColor = 'rgba(255, 255, 255, 0.349)';
@@ -47,7 +47,7 @@ jQuery(document).ready(function($) {
         } else
         if (id == "four__video") {
             document.querySelector('.video__content-title span:first-child').innerHTML = "Movie #4";
-            document.getElementById("img_for_js").src = "../img/video_violet.png";
+            document.getElementById("img_for_js").src = "img/video_violet.png";
             document.getElementById("fake_link").href = "https://www.youtube.com/watch?v=4LuQF719w14";
 
             document.getElementById("four__video").style.backgroundColor = 'rgba(255, 255, 255, 0.349)';
