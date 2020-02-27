@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Printi-Mo</title>
+</head>
+<!-- связать кнопку поиска с js скриптами(сделать их) -->
+
+<body>
+    <div class="warp">
+        <header class="header">
+            <div class="header__top-inner">
+                <div class="container-fluid">
+                    <div class="header__top">
+                        <div class="row no-gutters align-items-center">
+                            <div class="header__top-logo col pb-3 pt-3">
+                                <div class="logo mr-4">
+                                    <a href="#"><img src="img/logo.png" alt="logo"></a>
+                                </div>
+
+                                <div class="descript">
+                                    <img src="img/descript.png" alt="descript">
+                                </div>
+                            </div>
+
+                            <div class="col-auto">
+                                <div class="header__top-content">
+                                    <ul>
+                                        <li><a href="#">Оплата и доставка</a></li>
+                                        <li><a href="#">Контакты</a></li>
+                                        <li><a href="#">Вход или регистрация</a></li>
+                                    </ul>
+
+                                    <div id="search__btn">
+                                        <img id="search__img" src="img/pngSearch.svg" alt="Search">
+                                        <input id="search__input" type="text" name="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header__center-inner">
+                <div class="container-fluid">
+                    <div class="header__center">
+                        <ul>
+                            <li>
+                                <div class="header__center-title">
+                                    <img src="img/mapDot.png" alt="mapDot">
+                                    <span>г. Киев</span>
+                                </div>
+
+                                <div class="header__center-text">
+                                    <a href="#">
+                                        <span>Ул. Тушинская, 16.</span>
+                                        <span>ТЦ «Авиатор»;</span>
+                                    </a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="header__center-title">
+                                    <img src="img/mapDot.png" alt="mapDot">
+                                    <span>г. Харьков</span>
+                                </div>
+
+                                <div class="header__center-text">
+                                    <a href="#">
+                                        <span>Ул. Народного Ополчения, 1А.</span>
+                                        <span>ТЦ Родник;</span>
+                                    </a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="header__center-title">
+                                    <img src="img/mapDot.png" alt="mapDot">
+                                    <span>г. Львов</span>
+                                </div>
+
+                                <div class="header__center-text">
+                                    <a href="#">
+                                        <span>Ул. Гагарина, 9А.</span>
+                                        <span>ТЦ «Центральный»;</span>
+                                    </a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="header__center-title">
+                                    <img src="img/mapDot.png" alt="mapDot">
+                                    <span>г. Одесса</span>
+                                </div>
+
+                                <div class="header__center-text">
+                                    <a href="#">
+                                        <span>Ул. Школьная, 2.</span>
+                                        <span> ТЦ «Арбуз»;</span>
+                                    </a>
+                                </div>
+                            </li>
+
+                            <li id="require">
+                                <div class="header__center-title">
+                                    <img src="img/ordering__footer__phone.svg" alt="mapDot">
+                                    <a href="#">9 (123) 876-54-32</a>
+                                </div>
+
+                                <div class="header__center-text">
+                                    <div class="header__center-img">
+                                        <a href="#">
+                                            <span id="store__count">0</span>
+                                            <img src="img/store.png" alt="store">
+                                        </a>
+                                    </div>
+                                    <a href="#">Оформить заказ</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu__inner">
+                <div class="container-fluid">
+                    <nav class="menu">
+                        <div class="row">
+                            <div class="col">
+                                <img src="img/menuGallery.png" alt="">
+                                <a href="#">УСЛУГИ</a>
+                            </div>
+
+                            <div class="col">
+                                <img src="img/menuPhoto.png" alt="">
+                                <a href="#">ФОТОПЕЧАТЬ</a>
+                            </div>
+
+                            <div class="col">
+                                <img src="img/menuSuvienir.png" alt="">
+                                <a href="#">СУВЕНИРЫ</a>
+                            </div>
+
+                            <div class="col">
+                                <img src="img/menuBooks.png" alt="">
+                                <a href="#">ФОТОКНИГИ</a>
+                            </div>
+
+                            <div class="col">
+                                <img src="img/menuInterier.png" alt="">
+                                <a href="#">ДЛЯ ИНТЕРЬЕРА</a>
+                            </div>
+
+                            <div class="col">
+                                <img src="img/menuPoligrafy.png" alt="">
+                                <a href="#">ПОЛИГРАФИЯ</a>
+                            </div>
+
+                            <div class="col">
+                                <img src="img/menuBagets.png" alt="">
+                                <a href="#">БАГЕТЫ</a>
+                            </div>
+                            <div class="col">
+                                <img src="img/menuStore.png" alt="">
+                                <a href="#">МАГАЗИН</a>
+                            </div>
+
+                            <div class="col">
+                                <img src="img/menuDesign.png" alt="">
+                                <a href="#">ДИЗАЙНЕР</a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+
+
+        </header>
+
+
+        <main class="main">
+            <section class="banner">
+                <div class="container-fluid">
+                    <div class="row  no-gutters">
+                        <div class="col-xl-6 banner__content">
+                            <div class="banner__title">
+                                Хотите напечатать фотографии?
+                            </div>
+
+                            <div class="banner__inner-text">
+                                <div class="banner__text">
+                                    Приходите в любой из наших <span>фотоцентров</span> или <span>заказывайте печать</span> прямо на сайте
+                                </div>
+
+                                <div class="banner__text">
+                                    Печать основных форматов <span>от 1 минуты!</span>
+                                </div>
+
+                                <div class="banner__text">
+                                    Печатаем <span>с любого носителя</span>, принимаем фото <span>на почту и в WhatsApp</span>
+                                </div>
+
+                                <div class="banner__text">
+                                    При заказе фотопечати на сумму от 1000 рублей — <span>скидка 20% на всю сувенирную продукцию, вернём 7%</span> при заказе с сайта
+                                </div>
+                            </div>
+
+                            <div class="banner__inner-btn">
+                                <div class="banner__btn">
+                                    <a href="#">Заказать с кэшбеком 7%</a>
+                                </div>
+
+                                <div class="banner__adress-btn">
+                                    <a href="#">Узнать адреса</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="banner__img">
+                            <img src="img/banner.png" alt="banner">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="services">
+                <div class="container-fluid">
+                    <div class="services__content">
+                        <div class="services__title">
+                            <span>Мы более 10 лет занимаемся фотопечатью.</span>
+                            <span>Знаем и любим своё дело</span>
+                        </div>
+                        <div class="row  no-gutters">
+                            <div class="col services__box">
+                                <div class="services__text">
+                                    По Вашим пожеланиям сделаем <span>ретушь</span>, <span>цветокоррекцию</span>, добавим <span>резкость</span> и <span>уберём эффект красных глаз</span> на фото.
+                                </div>
+                                <div class="services__text">
+                                    Можем сделать фото <span>любого нестандартного размера</span>, например, под конкретную рамку или фотоальбом.
+                                </div>
+                                <div class="services__text">
+                                    Добавим на фото <span>поздравительные и памятные надписи, рамки, графические элементы и эффекты</span>.
+                                </div>
+                                <div class="services__text">
+                                    Приносите фотографии<span> на телефонах, флеш-картах, CD, DVD и HDD дисках</span>. Можете отправить на <span>электронную почту или в WhatsApp</span>.
+                                </div>
+                            </div>
+
+                            <div class="col services__box">
+                                <div class="services__text">
+                                    Можете переслать фото в <a href="#">WhatsApp: 8 (495) 144-34-16</a>
+                                </div>
+                                <div class="services__text ">
+                                    или на электронную почту: <a href="#">foto-dedovsk@yandex.ru.</a>
+                                </div>
+                                <div class="services__text">
+                                    <span>Отсканируем бумажные фотографии</span>, переведём в цифровой вид, а затем,напечатаем несколько копий.
+                                </div>
+                                <div class="services__text">
+                                    Бесплатная доставка в любой из наших фотоцентров. <a href="#">Рассчитать цену доставки курьером до дома</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="advantages">
+                <div class="container-fluid">
+                    <div class="advantages__title">
+                        Преимущества печати в лаборатории ( 2 – 4 рабочих дня):
+                    </div>
+                    <div class="advantages__content">
+                        <div class="row no-gutters">
+                            <div class="col-lg advantages__box">
+                                <img src="img/printer.png" alt="advantages__img">
+                            </div>
+
+                            <div class="col-lg advantages__box">
+                                <ul>
+                                    <li><span>Более низкая цена</span>, чем на срочное фото, плюс кэшбек <span>7% при заказе через сайт</span>.</li>
+                                    <li>
+                                        <span>Дополнительная скидка на сувениры</span> при заказе фотопечати на сумму более 1000 руб.
+                                    </li>
+                                    <li>
+                                        Печать <span> в профессиональной лаборатории</span>.
+                                    </li>
+                                    <li>
+                                        Повышенная <span>стойкость к выцветанию</span> красок. .
+                                    </li>
+                                    <li>
+                                        Печать <span>на фотобумаге Fujifilm</span>.
+                                    </li>
+                                    <li>
+                                        Помимо <span>глянцевой</span> и <span>матовой</span> бумаги можете заказать <span>сверхглянцевую печать (металлик)</span> или печать на <span>текстурированной бумаге (шелк)</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="advantages__btn d-flex justify-content-center">
+                        <a href="#">Заказать печать фото</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="ordering">
+                <div class="container-fluid">
+                    <div class="ordering__inner">
+                        <div class="ordering__title">
+                            Рассчитайте стоимость именно вашего заказа
+                        </div>
+
+                        <div class="ordering__size-title">
+                            Выберите размер фотографии
+                        </div>
+                        <div class="ordering__sizes">
+                            <div class="row no-gutters">
+                                <div class="col-sm ordering__size ordering__layot">
+                                    <span>Малые форматы (до 36×45 см)</span>
+                                </div>
+                                <div class="col-sm ordering__size">
+                                    <span> Большие форматы (более 40×60)</span>
+                                </div>
+                                <div class="col-sm ordering__size">
+                                    <span> Интерьерная печать</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ordering__table">
+                            <div class="row d-flex flex-column">
+                                <div class="col ordering__col">
+                                    <div class="ordering__table-left">
+                                        10x15
+                                    </div>
+
+                                    <div class="ordering__table-right">
+                                        <span>200 грн/шт</span>
+                                        <a href="#">Заказать</a>
+                                    </div>
+                                </div>
+
+                                <div class="col ordering__col">
+                                    <div class="ordering__table-left">
+                                        10x15
+                                    </div>
+
+                                    <div class="ordering__table-right">
+                                        <span>200 грн/шт</span>
+                                        <a href="#">Заказать</a>
+                                    </div>
+                                </div>
+
+                                <div class="col ordering__col">
+                                    <div class="ordering__table-left">
+                                        10x15
+                                    </div>
+
+                                    <div class="ordering__table-right">
+                                        <span>200 грн/шт</span>
+                                        <a href="#">Заказать</a>
+                                    </div>
+                                </div>
+
+                                <div class="col ordering__col">
+                                    <div class="ordering__table-left">
+                                        10x15
+                                    </div>
+
+                                    <div class="ordering__table-right">
+                                        <span>200 грн/шт</span>
+                                        <a href="#">Заказать</a>
+                                    </div>
+                                </div>
+
+                                <div class="col ordering__col">
+                                    <div class="ordering__table-left">
+                                        10x15
+                                    </div>
+
+                                    <div class="ordering__table-right">
+                                        <span>200 грн/шт</span>
+                                        <a href="#">Заказать</a>
+                                    </div>
+                                </div>
+
+                                <div class="col ordering__col">
+                                    <div class="ordering__table-left">
+                                        10x15
+                                    </div>
+
+                                    <div class="ordering__table-right">
+                                        <span>200 грн/шт</span>
+                                        <a href="#">Заказать</a>
+                                    </div>
+                                </div>
+
+                                <div class="col ordering__col">
+                                    <div class="ordering__table-left">
+                                        10x15
+                                    </div>
+
+                                    <div class="ordering__table-right">
+                                        <span>200 грн/шт</span>
+                                        <a href="#">Заказать</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ordering__btn-inner">
+                            <div class="row no-gutters">
+                                <div class="col-sm ordering__btn-text">
+                                    При печати используется технология классической "мокрой" фотопечати. Химическая печать с проявителем, фиксацией и сушкой.
+                                </div>
+
+                                <div class="col-sm-auto ordering__btn">
+                                    <a href="#">Нужна срочная печать?</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ordering__type">
+                            <div class="ordering__type-text">
+                                Выберите тип фотобумаги:
+                            </div>
+
+                            <div class="card-deck">
+                                <div class="card card__ordering">
+                                    <h4 class="card-title align-self-center">Матовая</h4>
+                                    <img class="card-img-bottom" src="img/type__img.png" alt="Card image cap">
+                                </div>
+
+                                <div class="card card__ordering">
+                                    <h4 class="card-title align-self-center">Глянцевая</h4>
+                                    <img class="card-img-bottom" src="img/type__img.png" alt="Card image cap">
+                                </div>
+
+                                <div class="card card__ordering">
+                                    <h4 class="card-title align-self-center">Metallic</h4>
+                                    <img class="card-img-bottom" src="img/type__img.png" alt="Card image cap">
+                                </div>
+
+                                <div class="card card__ordering">
+                                    <h4 class="card-title align-self-center">Silk</h4>
+                                    <img class="card-img-bottom" src="img/type__img.png" alt="Card image cap">
+                                </div>
+                            </div>
+
+                            <div class="ordering__type-count count-inner ">
+                                <div class="count-inner__text">
+                                    Нужное количество:
+                                </div>
+
+                                <div class="count-inner__input">
+                                    <input type="text">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ordering__common d-flex flex-column align-items-center">
+                            <div class="ordering__common-text">
+                                Итоговая сумма: <span>9000 грн.</span>
+                            </div>
+
+                            <div class="ordering__common-mini">
+                                Цена за штуку – 15 грн.
+                            </div>
+
+                            <div class="ordering__common-btn">
+                                <a href="#">Заказать фотопечать</a>
+                            </div>
+                        </div>
+
+                        <div class="ordering__footer ">
+                            <div class="row align-items-center">
+                                <div class="col-sm ordering__footer-text ">
+                                    <div class="ordering__fopter-text-1">
+                                        У Вас заказ на сумму <span>более 2000 рублей или вы корпоративный клиент</span> ?
+                                    </div>
+
+                                    <div class="ordering__footer-text-2">
+                                        Позвоните нам. Рассмотрим возможность <span>дополнительной скидки</span>.
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-auto ordering__footer-tel">
+                                    <img src="img/ordering__footer__phone.svg" alt="phone">
+                                    <a href="#">1 (111) 111-11-11</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+
+            <section class="choice">
+                <div class="container-fluid">
+                    <div class="row no-gutters">
+                        <div class="col-md">
+                            <div class="chioce__title">
+                                Если нужна срочная печать:
+                            </div>
+
+                            <div class="choice__items">
+                                <ul>
+                                    <li>Очень быстро. Прямо в салоне, в вашем присутствии.</li>
+                                    <li>Печатаем на шестицветном струйном принтере.</li>
+                                    <li>На плотной, качественной фотобумаге Lomond.</li>
+                                    <li>Сможете выбрать глянцевую или матовую печать.</li>
+                                </ul>
+                            </div>
+
+                            <div class="choice__text">
+                                Приносите фотографии в наш <span>ближайший салон</span>
+                                <span class="br">или отправляйте:</span>
+                                <span class="br">на E-mail: <a href="#"> foto-dedovsk@yandex.ru</a></span>
+                                <span class="br">или WhatsApp: <a href="#">1 (111) 111-11-11</a></span>
+                            </div>
+
+                            <div class="choice__btn">
+                                <a href="#">Найти ближайший салон</a>
+                            </div>
+                        </div>
+
+                        <div class="col-md">
+                            <div class="choice__table">
+                                <div class="choice__table-title">
+                                    Расчет стоимости печати:
+                                </div>
+
+                                <div class="choice__table-text">
+                                    Размер:
+                                </div>
+
+                                <div class="choice__table-row">
+                                    <ul>
+                                        <li class="choice__table-element">21x30</li>
+                                        <li class="choice__table-element">21x30</li>
+                                        <li class="choice__table-element">21x30</li>
+                                        <li class="choice__table-element">21x30</li>
+                                        <li class="choice__table-element">21x30</li>
+                                        <li class="choice__table-element">21x30</li>
+                                        <li class="choice__table-element">21x30</li>
+                                        <li class="choice__table-element">21x30</li>
+                                        <li class="choice__table-element">21x30</li>
+                                        <li class="choice__table-element">21x30</li>
+                                    </ul>
+                                </div>
+
+                                <div class="choice__table-text">
+                                    Бумага:
+                                </div>
+
+                                <div class="choice__table-var">
+                                    <div class="row">
+                                        <div class="col-sm-auto choice__var-element">
+                                            Матовая
+                                        </div>
+
+                                        <div class="col-sm-auto choice__var-element">
+                                            Глянцевая
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="choice__table-input">
+                                    <div class="row">
+                                        <div class="col-sm-auto choice__table-text">
+                                            Нужное количество:
+                                        </div>
+
+                                        <div class="col-sm-auto">
+                                            <input class="" type="text" name="">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="ordering__common d-flex flex-column align-items-center">
+                                    <div class="ordering__common-text">
+                                        Итоговая сумма: <span>9000 грн.</span>
+                                    </div>
+
+                                    <div class="ordering__common-mini">
+                                        Цена за штуку – 15 грн.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="cashback">
+                <div class="container-fluid">
+                    <div class="row no-gutters">
+                        <div class="col-md cashback__text">
+                            <span class="br">При заказе через наш сайт,</span>
+                            <span class="br">Вы получите кэшбэк – <span>7%</span></span>
+                        </div>
+
+                        <div class="col-md cashback__btn">
+                            <a href="#">Заказать через сайт</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="notice">
+                <div class="container-fluid">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col-md notice__content">
+                            <div class="notice__title">
+                                Уважаемые клиенты!
+                            </div>
+
+                            <div class="notice__text">
+                                Для экономии Вашего времени, просим <span>предварительно отбирать фотографии</span> и приносить их <span>на flash-карте</span> или отправлять на <span class="br"><span>E-mail / WhatsApp</span></span>
+                            </div>
+                        </div>
+
+                        <div class="col-md notice__img">
+                            <img src="img/choice__img.png" alt="fleshka">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="gallery">
+                <div class="container-fluid">
+                    <div class="gallery__title">
+                        Ждём вас в нашем ближайшем фотоцентре
+                    </div>
+
+                    <div class="card-deck  ">
+                        <div class="card">
+                            <img class="card-img" src="img/Rectangle18.png" alt="Card image cap">
+
+                            <div class="card-body">
+                                <h5 class="card-title">г. Киев</h5>
+                                <p class="card-text">ул. Тушинская, 16. ТЦ «Авиатор»</p>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <img class="card-img" src="img/Rectangle19.png" alt="Card image cap">
+
+                            <div class="card-body">
+                                <h5 class="card-title">г. Харьков</h5>
+                                <p class="card-text">ул. Гагарина, 9А. ТЦ «Центральный»</p>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <img class="card-img" src="img/Rectangle20.png" alt="Card image cap">
+
+                            <div class="card-body ">
+                                <h5 class="card-title">г. Запорожье</h5>
+                                <p class="card-text">ул. Школьная, 2. ТЦ «Арбуз»</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d669.2550565375652!2d35.10418265395078!3d47.85857153939813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dc66daa9950435%3A0xb5c478cdf6a45582!2sMcDonald&#39;s!5e0!3m2!1suk!2sua!4v1582012939531!5m2!1suk!2sua"
+                    width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row no-gutters">
+                    <div class="col-md">
+                        <div class="footer__img">
+                            <a href="#"><img src="img/logo.png" alt="logo"></a>
+                        </div>
+
+                        <div class="footer__socials">
+                            <a href="#"><img src="img/instagramm.svg" alt="instagramm"></a>
+                            <a href="#"><img src="img/okru.svg" alt="okru"></a>
+                            <a href="#"><img src="img/vk.svg" alt="vk"></a>
+                        </div>
+
+                        <div class="footer__copy">
+                            Copyright © 2018 – 2020 гг.
+                        </div>
+                    </div>
+
+                    <div class="col-md">
+                        <div class="footer__title">
+                            Популярные услуги
+                        </div>
+
+                        <div class="footer__text">
+                            <ul>
+                                <li>
+                                    <a href="#">Печать визиток</a>
+                                </li>
+                                <li>
+                                    <a href="#">Календари</a>
+                                </li>
+                                <li>
+                                    <a href="#">Печать на сувенирах</a>
+                                </li>
+                                <li>
+                                    <a href="#">Печать для интерьера</a>
+                                </li>
+                                <li>
+                                    <a href="#">Печать плакатов, наклеек</a>
+                                </li>
+                                <li>
+                                    <a href="#">Все услуги</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md">
+                        <div class="footer__title">
+                            Информация
+                        </div>
+
+                        <div class="footer__text">
+                            <ul>
+                                <li>
+                                    <a href="#">Все контакты</a>
+                                </li>
+                                <li>
+                                    <a href="#">Оплата и доставка</a>
+                                </li>
+                                <li>
+                                    <a href="#">Все отзывы</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="footer__payment">
+                            <img src="img/Mastercard.svg" alt="mastercard">
+                            <img src="img/Visa.svg" alt="visa">
+                        </div>
+                    </div>
+
+                    <div class="col-md">
+                        <div class="footer__title">
+                            Телефон и адреса
+                        </div>
+
+                        <div class="footer__phone">
+                            <a href="tel:+84951443416">8 (495) 144–34–16</a>
+                        </div>
+
+                        <div class="footer__text footer__adress">
+                            <ul>
+                                <li>
+                                    <a href="#"><span>г. Москва, ул. Тушинская, 16</span> <span>ТЦ «Авиатор»;</span></a>
+                                </li>
+                                <li>
+                                    <a href="#"><span>г. Дедовск, ул. Гагарина, 9А</span> <span>ТЦ «Центральный»;</span></a>
+                                </li>
+                                <li>
+                                    <a href="#"><span>пгт Нахабино, Школьная, 2 </span> <span>ТЦ «Арбуз.</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        </div>
+
+        <!-- !!!!!!!!!! -->
+        <div class="burger">
+            <div class="burger__top"></div>
+            <div class="burger__middle"></div>
+            <div class="burger__bottom"></div>
+        </div>
+
+        <div class="menu__burger-inner">
+            <div class="menu__burger">
+                <ul class="menu__burger-top">
+                    <li><a href="#">Оплата и доставка</a></li>
+                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#">Вход или регистрация</a></li>
+                </ul>
+
+                <ul class="menu__burger-middle">
+                    <li>
+                        <a href="#">Услуги</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Фотопечать</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Сувениры</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Фотокниги</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Для интерьера</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Полиграфия</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Багеты</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Магазин</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Дизайнер</a>
+                    </li>
+                </ul>
+
+                <ul class="menu__burger-bottom">
+                    <li>
+                        <img src="img/mapDot.png" alt="mapDot">
+                        <span>г. Киев</span>
+
+                        <a href="#">
+                            <span>Ул. Тушинская 16. </span>
+                            <span>ТЦ «Авиатор»;</span>
+                        </a>
+                    </li>
+                    <li>
+                        <img src="img/mapDot.png" alt="mapDot">
+                        <span>г. Киев</span>
+
+                        <a href="#">
+                            <span>Ул. Тушинская 16. </span>
+                            <span>ТЦ «Авиатор»;</span>
+                        </a>
+                    </li>
+                    <li>
+                        <img src="img/mapDot.png" alt="mapDot">
+                        <span>г. Киев</span>
+
+                        <a href="#">
+                            <span>Ул. Тушинская 16. </span>
+                            <span>ТЦ «Авиатор»;</span>
+                        </a>
+                    </li>
+                    <li>
+                        <img src="img/mapDot.png" alt="mapDot">
+                        <span>г. Киев</span>
+
+                        <a href="#">
+                            <span>Ул. Тушинская 16. </span>
+                            <span>ТЦ «Авиатор»;</span>
+                        </a>
+                    </li>
+                    <li>
+                        <img src="img/mapDot.png" alt="mapDot">
+                        <span>г. Киев</span>
+
+                        <a href="#">
+                            <span>Ул. Тушинская 16. </span>
+                            <span>ТЦ «Авиатор»;</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <img src="img/mapDot.png" alt="mapDot">
+                        <span>г. Харьков</span>
+
+                        <a href="#">
+                            <span>Ул. Народного Ополчения 1А.</span><span>ТЦ Родник;</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <img src="img/mapDot.png" alt="mapDot">
+                        <span>г. Львов</span>
+
+                        <a href="#">
+                            <span>Ул. Гагарина 9А.</span><span> ТЦ «Центральный»;</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <img src="img/mapDot.png" alt="mapDot">
+                        <span>г. Одесса</span>
+
+                        <a href="#">
+                            <span>Ул. Школьная 2.</span><span> ТЦ «Арбуз»;</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="js/libs.min.js"></script>
+        <script src="js/main.js"></script>
+</body>
+
+</html>
