@@ -141,7 +141,8 @@ body {
 .banner {
   background-image: url(../img/bgBanner.png);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: auto;
+  background-position: center top;
   padding-top: 230px;
   text-align: center;
   color: #fff;
