@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CROCO</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body class="body">
+    <header class="header d-flex justify-content-between container">
+        <a href="/" class="header__logo d-flex align-items-center justify-content-between">
+            <div class="header__logo-img">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="66"
+                    height="38" viewBox="0 0 66 38">
+                    <image width="66" height="38"
+                        xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEIAAAAmCAYAAABwMU2kAAAFhklEQVRogc2aWWxUdRTGf0NrobUWSrW0WlHcUDC4QNGgiLjgAz64BIORRCOJW2PcTUyUB02M+GBccEvUCEEwxhA3TCq4C1gVUYmguCCpG1CQgpXS0h5zyDfJzeTOcufOwpfcTHpn7n/5/mf5zrlNmBkRMRQ4GTgDOAE4AmgE9gF/A78Ca4ENwD9RBy8XKiPMOxK4TNc0oC7DbweANcBy4HXg54OdiFwsIgFcA9wNnJbHHJ3AC8DjwO78llkCOBEZrmYzW2KFwVozuyTLfGW7Mk08yczWFYiEJLrN7M6DkYh0rjEVeAU4ukg26W5yD7C/nN4QRBgRE4C3gGOKPPdC4GZgb5HnyQlDUn40Cni5BCQ4rgXml2CenJBKxCPSB6XCrcD1mqu6nEQEXeNK5fxS4w/gPGA0cAHwFLC91ItIWkQDcH8ZSHAcBbQB6yTWXIRdFWKtxYXSR1uB02RU7DGzFjObo+f6zazdzKaaWUUp0qezXiO3KCdqgauBVXIVl/4zgJXKLpOLvTYn4kzg7DIT4bgC+A34NHCvSvL+XeA5oLVYkzsR55c7YguuX44FPnCPTfnOY9iNwApgAXB6oWOIZ423gUtVEK0HuoB+oAI4FGgCxgCHFXLiNHBt8bssYGiG3/Uqwy2UO8UWZU7EJpnji+oh7Ap8X6V+gxMxE7gcGBt30gx4AHgH+DwLEUnsVbm/FHhDh5gfzOxUM0vkGF1HmNkMM3vGzDabWV+Bs8ciZYl5ZtYV8dktZrbAzCaaWW2hiq5c4H47HThXUb01YqMnDMvlpigO3ATMBoZHGKNfFu7u9ZG6ZVkRh4ggRirYefY5BzhLLhUVQSKSaJUMnyXyo2Ar8AXwPtAO/BgSiA+gUEQEcQhQD0yRZPb03KxTzbaRV6UnwuD90bmKU8dpnij4F1ityvozdc52FpOIMDRo8ZOVro/U1ZwSFB8C5mUZq14Ez9Z4o/NYj2edb4GvgA8985SKiCAS2kyDriadthPzg07N1WWP/D3TAp2EicBFcqkmZboo8PG/TkeEC6zbgY+1sFKgRppgrFK4X3v0uVmvBnr02sDv/acYsFVu4mReCMzRWNFOJw0RrtqWiGXvQC8TIcVsrXl78JMYz++XydfkozrTPTAILJKyvA14U5H3DuAUqc5CY1bM8SpVvOUjvTvcInxTAyFfJtQkaUu579F3o06vA/hOim5HnhtAynWVgmep4RXuXCfCA5ZH7j9DFuAp77FAOy0M2/Sab4N8eZP89hfVDdmQjvBiwwPy88DTnkadCI/gE3S6vSGTV6gYugsYl8PiBhXkdihX/6XW20bd2y7S3Yr6JJheU1E3RPMlikDCoPb3veqSZcpSB5AMltO1gJUZBqpTz8Dz93igJcaC+uRinbKEXvl4tdyjWam1WnGqWtY5TOnOiRqh7xIpY3cFDnSXMk2XNMN69Tz6UxeVJGKYVNtq9Q6zYbzytzddJwHHK1BFgcelG4CX8iS0KkBEkgzPHN35DBZMny5o7lVJ2xFhDH8XcjhwogiaovcijbKiypAs4xrgPuDJfBZdDKTqiJPUE/ACZXGM+SpFzhgR1SIVWKtPjxeP6gST+X8wTfYqCxHIzB/WqT0BfFPA+VwBPqtaIakO9+lzQP9o0qO/e/RMMvgOpMSDhO69B2yJvbI0jYo6M5tvZj+Z2VIzm2lmjTFb69PMbE2BGzmm9cVu+WcrutxVbtEJ1queX6GA2ikNsTssCgvDZWHXqfkatSDKBk/ND6rDHQu5Vp+j1HDxeuBiBcZuiZKdMvNt6iEOKhY06RpX4Mavz/OllG27yunYyKcM91P2Dfo/lLnF+Ea9/vD7ns6Sp+4DeyD0GJDOYsLgGiNZZTrZrlB9865WXQC5Wg1qhfgA/gdgVbt9k6UbGAAAAABJRU5ErkJggg==" />
+                </svg>
+            </div>
+            <div class="header__logo-text">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="132px"
+                    height="31px">
+                    <image x="0px" y="0px" width="132px" height="31px"
+                        xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIQAAAAfCAQAAACM7K2sAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflAgsTIBcvq0i8AAAHV0lEQVRo3q1Za2xVVRb+zum9vUIfvORhW1osWkoFBJEBnSKglmA0kVgRFUKJAeNjMr6mM4xMzMw4jI4JGo2JohDIZIbxiagIRgzgA1OrDSC0RmihVF72wVjaUkq5/ebHvd137X2eTlj7z9p7fWutfdY+e52917EIFypCGWZgDPLVSARH8TzegTvdgDm4FmORjSjasRGr0OuKG40y/BpjUYA0AMAxNKAKO1GH8DQGM1GMcYgl+xa68Qbe9UDbmIYZKEEuCKAPjahDNfa4IGm28XyFx+lGnSymEz+XH/NnA7nUBVfEl3jU1e5J/pPXuGg426+4gU3sc1g4x3IXdDaXczfbHOhmbuMCputoXTWDK3ma3vR7w1Ue1/KCC+5jA5fJFWylH3VwFbN9g1DANTznqb+NaRra4l3c4+txO0u9ApHH9+hPyzRnUzxdrTfC9QHD0BaO8QzDPNb66n7BqBb4F13eG5NO80G3QIziFwGK+zhMOLuWDR64Fu1Fz+XuUGEgyRpe7hqGcnYFaP5WoAfz/ZD+4nymX8tKJssh2ITZRvpoxXF0oAsWLNhoxHM4qGQF2IoSA/8jmtCGVqxBtRrLxpuYZ+COowknYSMHBRhpyD5DOdqMsduwEVnGWC/acQaEBQtnsQ1PoTspycA6LHSkwhNoRRSXYbBD8iSeSSVLiy8ZsarlE5zOkRxAizZtWtoKxfih49VcyonMcKzlCwbuay7j1cxKrtxUPsgqA/EybSPJmqm7mit5C6eziEUsYjHzNPzTBvonvsz5nMzLmM9SLucmntfk3Zyf2hplWsqL81kO901c92mmuvhI8tHMNpudAneeKznIgRnEv2pTi3OekNpG3jrFh1xspNp1RkJdx7EGIp2z+K2GOcTcRCCi3KlF6DcBH7Fh3CvwLbzVAxfjZoFr52JPi4vYIZC7GFGS+dqU6zjVd2Zp3CbQPaz0wF3KNzS7f04EokzLsCsDwgDeq4WtwhM3g90CWelr8w8C2cebk6NR7hLjR3hVwMxmMS7wT/sgM/mpQB5mHjiM/xJDO41s4Gy2ts4bfZB/E7jPjJ3vtLpdoNerB0ttrb7EXvZtr2ke03yxk3hMoJeCs3lI7M+5gc5GiaNRJ6d54ix+LezeHmh3jsgUB5KHq7+Iqb6vnRTc2iAeUOhelgV6lAv1FriC7apbw8xA9VKh/qUPLl+cUQ/ykkC7WeL70cbrCUZEoozz7kALM8QS7Q7xJFeIzHTYxjhkqm9qNToDLz1XC77aB5eDDHE6OBdotwNfKX4ghgIYjkJx9vgu0EIhhir+8xBPUo+9ih9hw4aluocClYF0wf/ogxso7J4MYRc4rbgYBgGIICosHAvUjwqPR0J5rFccbaQJ9a4Qyn2Cb/HBZcBWvI0wlEJZSAdgI6JGOnEmUD/T1VY4j7ARR6okMTKEsiX4Cz64M8KuhTCUQvXiZwBEXI1cggGB+nL79QWiDZSNdlFEmZAsmIQl+sg6RJgmh7AVQbHie9AF4IKYWQ4KAi30CD4v1PxTOQg29qBd9WaGeifCUYO4PF0fYmIjMVPx/0UDgBYcVSO5GBdooUk8SSkGBuILxAI12/gGjao7CosuWiDaUaP4wVgWiF+AXMUfRAOAXtSqkSjuCbTwPU4pfiamBuIXI1vxNTbq8ZEQPorLL1ooNgv+AUzwxRbid6LXP6NdYt/fjjkB/lpQpfgI/iS+OW40RlucLSBYKI5U5Ce81PcY8qjALvRF5rNJYHdwiM+ZUF6W2piTHI+J0ylZy4KAI9JcSvqjDzLGtwSykQWJ4Rc0A1uZe1ECYdYGtnrUn0YbFaW/C9kSTfKl41Ktt6hWZTvPRzxuTtlco9ld1V+PyOdhTbCPS1yKLIn2mMDdGRCIHHH6J8kfeB8HGgfrCgcmR8hj3KFJa3mH77VwLs9q+HUuoZul3TzJeo5O1SwXGnUb8hv+g/eylJM4hVM4mSNcAlEeEAjwFofdGq7ifJZwIhdwNWsMabfjjjmNzRriPLdzOcdzOGPJJgvzlqMmdoSreQNHMJ0DeAUX8m3Hz4e7CFm8rXSt+8Z5IdmOJysPvywQ4P2OUCQep9fV28MuFpawx0X/BPdzP/ezllVcJq7cmVqZoN9uM2t4wHhbEvRUQk86fNL1H0WKzrD4/wgE+JBWoPGmc3zcM5g9vprxxKom2whuDeWPJJ/tr4bpDisCfsMsJlgp+gtCBQIsZ33glE74pt5FPOWr/W8jGb4eIgjdXJEqF5kOJ/A/Wv1Qp3kEK0T/xpCBAEfzVbZ42m3lWl4ZYGESP3TdTv2BMFNoBet8w7CDcyTezeVNXMtGF9XtzCI4ROXcDZ5fFvc2nc9xryMTfcfVvC6UfoR3cLPrb78+17JNHitZ7YI+yy1cZHy91A8ek/JwFSagWN3PoqjD+uTtYTDuxmR8jk0hyi0mDUchSjARWSA6sQ+HUI/mX6AfQzFm4RpMVHWRNJzFK9ggbqqShqIYN6IE4xFBGk7jIKpRhR/U7yBF/wP4S67+RvNigAAAAABJRU5ErkJggg==" />
+                </svg>
+            </div>
+        </a>
+        <nav class="header__menu d-flex align-items-center">
+            <ul class="d-flex justify-content-between">
+                <li><a href="#about">О студии</a></li>
+                <li><a href="#portfolio">Наше портфолио</a></li>
+                <li><a href="#clients">Клиенты</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+            </ul>
+        </nav>
+        <div id="langs-btns" class="header__langs d-flex align-items-center">
+            <button class="header__langs-btn active">РУ</button>
+            <button class="header__langs-btn">EN</button>
+        </div>
+    </header>
+
+<main>
+    <section class="about">
+        <div class="container">
+            <div class="row">
+                <div class="about__left col-7">
+                    <div class="about__title">
+                        <span>Мы — лидеры</span> в сфере разработки мобильных игр и веб-сайтов
+                    </div>
+                    <div class="about__btns">
+                        <button class="about__btns-request">
+                            Оставить заявку
+                        </button>
+                        <button class="about__btns-portfolio">
+                            Посмотреть портфолио
+                        </button>
+                    </div>
+                </div>
+                <div class="about__right col-5">
+                    <img src="./img/phones.png" alt="phones">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="digits">
+        <div class="container">
+            <div class="digits__title text-center">
+                Мы в цифрах
+            </div>
+            <div class="digits__items row">
+                <div class="digits__item col-xl-3">
+                    <div class="digits__item-title">
+                        35
+                    </div>
+                    <div class="digits__item-text">
+                        Постоянных клиентов
+                        доверившихся нам
+                    </div>
+                </div>
+                <div class="digits__item col-xl-3">
+                    <div class="digits__item-title">
+                        500+
+                    </div>
+                    <div class="digits__item-text">
+                        Выполненых проектов
+                        с особой любовью
+                    </div>
+                </div>
+                <div class="digits__item col-xl-3">
+                    <div class="digits__item-title">
+                        20 000
+                    </div>
+                    <div class="digits__item-text">
+                        Постоянных клиентов
+                        доверившихся нам
+                    </div>
+                </div>
+                <div class="digits__item col-xl-3">
+                    <div class="digits__item-title">
+                        500+
+                    </div>
+                    <div class="digits__item-text">
+                        Выполненых проектов
+                        с особой любовью
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="portfolio">
+        <div class="container">
+            <div class="portfolio__title text-center">
+                Наши работы
+            </div>
+            <div class="portfolio__carousel">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="./img/slide1.png" alt="slide">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/slide2.png" alt="slide">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/slide3.png" alt="slide">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/slide1.png" alt="slide">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/slide3.png" alt="slide">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/slide2.png" alt="slide">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/slide3.png" alt="slide">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/slide1.png" alt="slide">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/slide2.png" alt="slide">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/slide3.png" alt="slide">
+                        </div>
+                    </div>
+                </div>
+                <div class="btn__controls d-flex justify-content-end">
+                    <button class="btn__control swiper-btn-prev"></button>
+                    <button class="btn__control swiper-btn-next"></button>
+                </div>
+            </div>
+    </section>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="./js/main.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
